@@ -55,6 +55,7 @@ class _ProdukDetailState extends State<ProdukDetail> {
                   produk: widget.produk!,
                 )));
           }),
+
           // Tombol Hapus
           OutlinedButton(
             child: const Text("DELETE"), onPressed: () => confirmHapus()),
@@ -69,7 +70,14 @@ class _ProdukDetailState extends State<ProdukDetail> {
         //tombol hapus
         OutlinedButton(  
           child: const Text("Ya"),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(  
+                builder: (context) => ProdukForm(  
+                  produk: widget.produk!,
+                )));
+          },
         ),
         //tombol batal
         OutlinedButton(  

@@ -12,8 +12,8 @@ class Login {
     return Login(
         code: obj['code'],
         status: obj['status'],
-        token: obj['token'],
-        userID: obj['data']['user']['id'],
+        token: obj['data']['token'],
+        userID: int.tryParse(obj['data']['user']['id']),
         userEmail: obj['data']['user']['email']);
   }
 }
